@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: {
-    'admin-dashboard': './src/assets/js/admin-dashboard.js',
+    'admin-products': './src/assets/js/pages/admin/products.js',
     'new-product': './src/assets/js/new-product.js',
     'edit-product': './src/assets/js/edit-product.js',
     checkout: './src/assets/js/checkout.js',

@@ -1,0 +1,43 @@
+.c-admin-sidebar {
+	background-color: $normal-color;
+	color: $gray-color;
+	padding: 2rem 0;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.c-tab-group {
+	&__title {
+		font-size: 1.4rem;
+		letter-spacing: .2rem;
+		padding: 0 2rem;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	&__option {
+		margin: 1rem 0;
+		font-size: 1.6rem;
+		padding: .5rem 2rem;
+		color: $gray-color;
+		display: flex;
+		align-items: center;
+
+		&.is-active {
+			color: $white-color;
+			background-color: $normal-color-2;
+		}
+	}
+
+	&__icon {
+		flex-basis: 14%;
+		text-align: center;
+		margin-right: 1rem;
+	}
+
+	&__page {
+		flex: 1;
+	}
+}

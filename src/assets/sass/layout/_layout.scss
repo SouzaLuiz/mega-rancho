@@ -20,3 +20,9 @@
 	align-items: center;
 	justify-content: center;
 }
+
+.l-dashboard {
+	display: grid;
+	grid-template-columns: minmax(150px, 20%) 1fr;
+	height: 100vh;
+}

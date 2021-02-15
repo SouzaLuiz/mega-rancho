@@ -7,6 +7,7 @@ import cookieParser from 'cookie-parser'
 import methodOverride from 'method-override'
 
 import routes from './routes'
+import newRoutes from './routes/index'
 
 const app = express()
 
@@ -33,5 +34,6 @@ mongoose.connect(process.env.MONGODB_URI, {
 })
 
 app.use(routes)
+app.use(newRoutes)
 
 app.listen(process.env.PORT || 3333)
