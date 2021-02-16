@@ -11,13 +11,9 @@ class GetAllProducts {
 		return products
 	}
 
-	async formatProducts (product: IProduct) {
+	async formatProducts ({ id, name, imageId, imageUrl, price }: IProduct) {
 		return {
-			id: product.id,
-			name: product.name,
-			imageId: product.imageId,
-			imageUrl: product.imageUrl,
-			price: numberForMoney(product.price)
+			id, name, imageId, imageUrl, price: numberForMoney(price)
 		}
 	}
 

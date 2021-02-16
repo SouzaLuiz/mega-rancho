@@ -14,7 +14,6 @@ routes.get('/new-product', PagesController.newProduct)
 routes.get('/shooping-cart', PagesController.shoopingCart)
 routes.get('/checkout', PagesController.checkout)
 routes.get('/order-result', PagesController.orderResult)
-routes.get('/admin-dashboard', PagesController.adminDashboard)
 routes.get('/edit-product/:id', PagesController.editProduct)
 
 routes.post('/products', upload.single('image'), sharp.resizing, ProductController.store)

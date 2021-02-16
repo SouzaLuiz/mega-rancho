@@ -40,6 +40,24 @@
 				</a>
 			</aside>
 
+			{# Componente de alerta #}
+			{# <span
+				class="c-alert is-warning
+				{% if productsEmpty %}is-visible{% endif %}"
+			>
+				<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+				&nbsp;Desculpe não há produtos disponíveis
+			</span> #}
+
+			{# Deleta produto
+			<form
+				method="POST"
+				action="/products/{{product.id}}?_method=DELETE"
+				class="c-product-list__button"
+			>
+				<button type="submit" class="c-product-list__button is-delete">Excluir</button>
+			</form> #}
+
 			<article class="c-admin-content">
 				<div class="c-content-list">
 					<header class="c-content-list__header">
