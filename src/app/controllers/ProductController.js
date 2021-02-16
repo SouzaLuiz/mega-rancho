@@ -12,7 +12,7 @@ class ProductController {
 
     await Product.create({ name, price, imageId, imageUrl })
 
-    return res.redirect('/admin-dashboard')
+    return res.redirect('/admin/products')
   }
 
   async update (req, res) {

@@ -56,7 +56,6 @@
 	}
 }
 
-
 .c-search-form {
 	margin-right: 1rem;
 	display: flex;
@@ -78,6 +77,64 @@
 
 		&:hover {
 			color: $black-color;
+		}
+	}
+}
+
+.c-content-table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	text-align: left;
+
+	& tr, td {
+		padding: .5rem 0;
+		border-bottom: 1px solid $border-gray-color;
+	}
+
+	&__header {
+		padding: 1rem 0;
+		font-size: 1.2rem;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	&__line {
+		font-size: 1.2rem;
+		padding: 1rem 0;
+		height: 4rem;
+		color: $normal-color;
+	}
+
+	&__block-image {
+		height: inherit;
+		text-align: center;
+		padding: .2rem 0;
+	}
+
+	&__image {
+		height: inherit;
+	}
+}
+
+// opções da lista de conteúdos
+.c-item-options {
+	text-align: center;
+
+	&__icon {
+		margin-right: 1.2rem;
+
+		& i {
+			font-size: 2.4rem;
+			vertical-align: middle;
+		}
+
+		&.is-blue {
+			color: #3498db;
+		}
+
+		&.is-red {
+			color: #e74c3c;
 		}
 	}
 }

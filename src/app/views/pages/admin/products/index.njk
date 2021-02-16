@@ -40,7 +40,7 @@
 				</a>
 			</aside>
 
-			<section class="c-admin-content">
+			<article class="c-admin-content">
 				<div class="c-content-list">
 					<header class="c-content-list__header">
 						<h2 class="c-content-list__title">
@@ -60,15 +60,50 @@
 								</button>
 							</form>
 
-							<a href="/admin/products/create" class="c-content-list__add-button">
+							<a href="/new-product" class="c-content-list__add-button">
 								<i class="fa fa-plus" aria-hidden="true"></i>
 								&nbsp;&nbsp;Adicionar novo
 							</a>
 						</div>
 					</header>
-				</div>
-			</section>
 
+					<section class="c-content-list__list">
+						<table class="c-content-table">
+							<tr>
+								<th></th>
+								<th class="c-content-table__header">Título</th>
+								<th class="c-content-table__header">Categoria</th>
+								<th class="c-content-table__header">Disponibilidade</th>
+								<th class="c-content-table__header">Preço</th>
+								<th></th>
+							</tr>
+							{% for product in products %}
+								<tr class="c-content-table__line">
+									<td class="c-content-table__block-image">
+										<img class="c-content-table__image" src="{{product.imageUrl}}" >
+									</td>
+									<td>{{product.name}}</td>
+									<td>
+										Alimento
+									</td>
+									<td>
+										Disponível
+									</td>
+									<td>{{product.price}}</td>
+									<td class="c-item-options">
+										<a href="/admin/products/{{product.id}}/edit" class="c-item-options__icon is-blue">
+											<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+										</a>
+										<a href="" class="c-item-options__icon is-red">
+											<i class="fa fa-trash-o" aria-hidden="true"></i>
+										</a>
+									</td>
+								</tr>
+							{% endfor %}
+						</table>
+					</section>
+				</div>
+			</article>
 		</main>
     <script src="/js/admin-products.bundle.js"></script>
 	</body>
