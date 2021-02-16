@@ -1,0 +1,83 @@
+
+.c-admin-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $background-color;
+}
+
+.c-content-list {
+	background-color: $white-color;
+	border: 1px solid $border-gray-color;
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	height: 85%;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		padding: 2rem;
+		border-bottom: 1px solid $border-gray-color;
+	}
+
+	&__options {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	&__title {
+		font-size: 1.8rem;
+		font-weight: 600;
+	}
+
+	&__badge {
+		background-color: $border-gray-color;
+		border-radius: 1rem;
+		padding: 0 .5rem;
+		font-size: 1.4rem;
+		margin-left: 1rem;
+	}
+
+	&__add-button {
+		background-color: $normal-color;
+		padding: 1rem;
+		color: $white-color;
+		height: 4rem;
+		border-radius: $border-radius-value;
+		font-size: 1.4rem;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+
+.c-search-form {
+	margin-right: 1rem;
+	display: flex;
+	padding-left: 1rem;
+	height: 4rem;
+	border: 1px solid $border-gray-color;
+	border-radius: $border-radius-value;
+
+	&__input {
+		border: none;
+	}
+
+	&__button {
+		border: none;
+		color: $gray-color;
+		padding: 0 1rem;
+		transition: ease-in .2s;
+		cursor: pointer;
+
+		&:hover {
+			color: $black-color;
+		}
+	}
+}

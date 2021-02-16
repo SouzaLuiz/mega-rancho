@@ -24,6 +24,11 @@
 		color: $gray-color;
 		display: flex;
 		align-items: center;
+		transition: ease-in .2s;
+
+		&:hover {
+			color: $white-color;
+		}
 
 		&.is-active {
 			color: $white-color;
@@ -32,7 +37,7 @@
 	}
 
 	&__icon {
-		flex-basis: 14%;
+		flex-basis: 10%;
 		text-align: center;
 		margin-right: 1rem;
 	}
