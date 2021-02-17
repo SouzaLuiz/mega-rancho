@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./dist/server.js",
     "build": "npm-run-all clean assets:build ts:build",
-		"clean": "rimraf dist public/css public/js",
+    "clean": "rimraf dist public/css public/js",
     "ts:build": "tsc",
     "postts:build": "cpx 'src/app/views/**' 'dist/app/views'",
     "ts:watch": "tsnd --respawn --ignore-watch node_modules --transpile-only src/server.ts",
@@ -13,7 +13,8 @@
     "start:dev": "npm-run-all -p assets:watch ts:watch",
     "browser-sync": "browser-sync start --proxy 'localhost:3333' --files 'public/**, src/app/views/**'",
     "assets:watch": "webpack -w --mode development",
-    "assets:build": "webpack --mode production"
+    "assets:build": "webpack --mode production",
+    "commit": "cz"
   },
   "dependencies": {
     "cloudinary": "^1.23.0",
@@ -36,8 +37,10 @@
     "@types/nunjucks": "^3.1.4",
     "babel-loader": "^8.2.2",
     "browser-sync": "^2.26.13",
+    "commitizen": "^4.2.3",
     "cpx": "^1.5.0",
     "css-loader": "^5.0.2",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.14.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
@@ -54,5 +57,10 @@
     "typescript": "^4.1.5",
     "webpack": "^5.21.2",
     "webpack-cli": "^4.5.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
